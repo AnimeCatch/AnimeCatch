@@ -1,0 +1,22 @@
+{
+  "app_status": "active",
+  "maintenance_message": "التطبيق في وضع الصيانة، يرجى الانتظار...",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+  "sources": [
+    {
+      "id": "gogoanime",
+      "name": "GogoAnime",
+      "is_active": true,
+      "base_url": "https://anitaku.to",
+      "search_path": "/search.html?keyword=",
+      "selectors": {
+        "video_player": [
+          "iframe.video", 
+          ".play-video > iframe", 
+          "div.server-video iframe"
+        ],
+        "episode_link": "ul.items li a"
+      }
+    }
+  ]
+}
