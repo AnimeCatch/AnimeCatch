@@ -1,22 +1,23 @@
 {
   "app_status": "active",
-  "maintenance_message": "التطبيق في وضع الصيانة، يرجى الانتظار...",
-  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
-  "sources": [
+  "user_agent": "Mozilla/5.0 (Linux; Android 10; Mobile) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Mobile Safari/537.36",
+  "sites": [
     {
       "id": "gogoanime",
-      "name": "GogoAnime",
-      "is_active": true,
-      "base_url": "https://anitaku.to",
-      "search_path": "/search.html?keyword=",
-      "selectors": {
-        "video_player": [
-          "iframe.video", 
-          ".play-video > iframe", 
-          "div.server-video iframe"
-        ],
-        "episode_link": "ul.items li a"
-      }
+      "domain": "https://anitaku.to",
+      "steps": [
+        "iframe.video",
+        "div.server-video iframe",
+        "video.html5-main-video"
+      ]
+    },
+    {
+      "id": "zozoanime",
+      "domain": "https://zozoanime.rs",
+      "steps": [
+        "#player-frame",
+        "source[type='video/mp4']"
+      ]
     }
   ]
 }
