@@ -1,10 +1,38 @@
 {
   "app_status": "active",
-  "user_agent": "Mozilla/5.0 (Linux; Android 10; Mobile) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Mobile Safari/537.36",
+  "maintenance_message": "سيرفرات التطبيق تخضع للصيانة، سنعود قريباً!",
+  "user_agent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36",
   "sites": [
     {
+      "id": "egydead",
+      "name": "EgyDead (Arabic)",
+      "is_active": true,
+      "domain": "https://egydead.media",
+      "validation_selector": ".watch-now-btn",
+      "url_patterns": [
+        "/episode/انمي-{slug}-الحلقة-{ep}-مترجمة/",
+        "/episode/مسلسل-{slug}-الحلقة-{ep}-مترجمة/",
+        "/episode/{slug}-الحلقة-{ep}-مترجمة/",
+        "/episode/{slug}-الحلقة-{ep}/",
+        "/movie/{slug}/",
+        "/movie/{slug}-مترجم/"
+      ],
+      "steps": [
+        ".watch-now-btn",
+        "ul.servers-list li iframe"
+      ]
+    },
+    {
       "id": "gogoanime",
+      "name": "GogoAnime (English)",
+      "is_active": true,
       "domain": "https://anitaku.to",
+      "validation_selector": "div.anime_video_body",
+      "url_patterns": [
+        "/{slug}-episode-{ep}",
+        "/{slug}-episode-{ep}-english-subbed",
+        "/category/{slug}"
+      ],
       "steps": [
         "iframe.video",
         "div.server-video iframe",
@@ -13,7 +41,14 @@
     },
     {
       "id": "zozoanime",
+      "name": "ZozoAnime",
+      "is_active": true,
       "domain": "https://zozoanime.rs",
+      "validation_selector": "#player-frame",
+      "url_patterns": [
+        "/episode/{slug}-episode-{ep}",
+        "/anime/{slug}/episode-{ep}"
+      ],
       "steps": [
         "#player-frame",
         "source[type='video/mp4']"
