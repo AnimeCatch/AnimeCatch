@@ -3,25 +3,21 @@
   "maintenance_message": "الصيانة جارية، سنعود قريباً!",
   "sites": [
     {
-      "id": "egydead",
-      "name": "EgyDead",
-      "is_active": true,
-      "domain": "https://egydead.media",
-      "validation_selector": ".watchNow button",
-      "url_patterns": [
-        "/episode/{slug}-s{season}e{ep}/",
-        "/episode/{slug}-الموسم-{season}-الحلقة-{ep}-مترجمة/",
-        "/episode/{slug}-الحلقة-{ep}-مترجمة/",
-        "/episode/{slug}-الحلقة-{ep}/",
-        "/episode/{slug}-season-{season}-episode-{ep}",
-        "/movie/{slug}/"
-      ],
-      "steps": [
-        "CLICK: .watchNow button",
-        "CLICK: .watchAreaMaster",
-        "CLICK: .watchAreaMaster",
-        "FINAL: .watchAreaMaster iframe"
-      ]
+      
+  "id": "egydead",
+  "name": "EgyDead",
+  "domain": "https://egydead.media",
+  "validation_selector": ".watchNow button",
+  "url_patterns": [
+    "/episode/{slug}-s{season}e{ep}/",
+    "/episode/{slug}-الموسم-{season}-الحلقة-{ep}-مترجمة/",
+    "/episode/{slug}-الحلقة-{ep}-مترجمة/",
+    "/episode/{slug}/"
+  ],
+  "steps": [
+    "CLICK: .watchNow button",
+    "SCAN: ul.serversList li" 
+  ]
     },
     {
       "id": "gogoanime",
