@@ -1,33 +1,36 @@
 {
   "app_status": "active",
-  "maintenance_message": "الصيانة جارية، سنعود قريباً!",
+  "maintenance_message": "سيرفرات التطبيق تخضع للصيانة، سنعود قريباً!",
+  "user_agent": "Mozilla/5.0 (Linux; Android 10; Mobile) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36",
   "sites": [
     {
-      
-  "id": "egydead",
-  "name": "EgyDead",
-  "domain": "https://egydead.media",
-  "validation_selector": ".watchNow button",
-  "url_patterns": [
-    "/episode/{slug}-s{season}e{ep}/",
-    "/episode/{slug}-الموسم-{season}-الحلقة-{ep}-مترجمة/",
-    "/episode/{slug}-الحلقة-{ep}-مترجمة/",
-    "/episode/{slug}/"
-  ],
-  "steps": [
-    "CLICK: .watchNow button",
-    "SCAN: ul.serversList li" 
-  ]
+      "id": "egydead",
+      "name": "EgyDead (Arabic)",
+      "is_active": true,
+      "domain": "https://egydead.media",
+      "validation_selector": ".watchNow button",
+      "url_patterns": [
+        "/episode/{slug}-s{season}e{ep}/",
+        "/episode/{slug}-الموسم-{season}-الحلقة-{ep}-مترجمة/",
+        "/episode/{slug}-الحلقة-{ep}-مترجمة/",
+        "/episode/{slug}-الحلقة-{ep}/",
+        "/movie/{slug}/"
+      ],
+      "steps": [
+        "CLICK: .watchNow button",
+        "CLICK: .watchAreaMaster",
+        "CLICK: .watchAreaMaster",
+        "CLICK: .watchAreaMaster"
+      ]
     },
     {
       "id": "gogoanime",
-      "name": "GogoAnime",
+      "name": "GogoAnime (English)",
       "is_active": true,
       "domain": "https://anitaku.to",
       "validation_selector": "div.anime_video_body",
       "url_patterns": [
         "/{slug}-episode-{ep}",
-        "/{slug}-season-{season}-episode-{ep}",
         "/category/{slug}"
       ],
       "steps": [
