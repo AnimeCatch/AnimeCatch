@@ -1,10 +1,10 @@
 {
   "app_status": "active",
-  "maintenance_message": "جاري الصيانة...",
+  "maintenance_message": "سيرفرات التطبيق تخضع للصيانة، سنعود قريباً!",
   "sites": [
     {
       "id": "egydead",
-      "name": "EgyDead",
+      "name": "EgyDead (Arabic)",
       "is_active": true,
       "domain": "https://egydead.media",
       "validation_selector": ".watchNow button",
@@ -16,14 +16,16 @@
         "/movie/{slug}/"
       ],
       "steps": [
-        "CLICK: .watchNow button",
-        "CLICK: .mob-servers ul li:nth-child(1)",
-        "CLICK: .mob-servers ul li:nth-child(2)"
+        "CLICK: .watchNow button",      
+        "CLICK: .watchAreaMaster",      
+        "CLICK: .watchAreaMaster",      
+        "CLICK: .watchAreaMaster",      
+        "FINAL: .watchAreaMaster iframe" 
       ]
     },
     {
       "id": "gogoanime",
-      "name": "GogoAnime",
+      "name": "GogoAnime (English)",
       "is_active": true,
       "domain": "https://anitaku.to",
       "validation_selector": "div.anime_video_body",
@@ -32,7 +34,8 @@
         "/category/{slug}"
       ],
       "steps": [
-        "FINAL: iframe.video"
+        "FINAL: iframe.video",
+        "FINAL: div.play-video iframe"
       ]
     }
   ]
