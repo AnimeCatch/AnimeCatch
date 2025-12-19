@@ -26,7 +26,7 @@
         "/episode/{slug}-الحلقة-{ep}/"
       ],
       "transition_selector": ".watchNow button",
-      "player_selector": ".mobIframe iframe, .watchAreaMaster"
+      "player_selector": ".mobIframe iframe, .mob-servers ul li"
     },
     {
       "id": "mycima",
