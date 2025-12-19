@@ -1,19 +1,53 @@
 {
   "app_status": "active",
-  "maintenance_message": "...",
+  "maintenance_message": "جاري تحسين السيرفرات، سنعود حالاً!",
+  "user_agent": "Mozilla/5.0 (Linux; Android 10; Mobile) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36",
+  
+  "sniffer_keys": [
+    "mp4",
+    "m3u8",
+    "googlevideo",
+    "primevideo",
+    "media/delivery",
+    "pixel",
+    "video",
+    "master.m3u8",
+    "index.m3u8"
+  ],
+
   "sites": [
     {
       "id": "egydead",
       "name": "EgyDead",
       "domain": "https://egydead.media",
-      "validation_selector": ".watchNow button",
       "url_patterns": [
         "/episode/{slug}-s{season}e{ep}/",
         "/episode/{slug}-الموسم-{season}-الحلقة-{ep}-مترجمة/",
-        "/episode/{slug}-الحلقة-{ep}-مترجمة/",
         "/episode/{slug}-الحلقة-{ep}/"
       ],
-      "steps": []
+      "transition_selector": ".watchNow button",
+      "player_selector": ".mobIframe iframe, .watchAreaMaster"
+    },
+    {
+      "id": "mycima",
+      "name": "MyCima / WeCima",
+      "domain": "https://wecima.show",
+      "url_patterns": [
+        "/watch/{slug}/",
+        "/series/{slug}/"
+      ],
+      "transition_selector": ".WatchServersList btn:first-child", 
+      "player_selector": "iframe, video"
+    },
+    {
+      "id": "gogoanime",
+      "name": "GogoAnime",
+      "domain": "https://anitaku.to",
+      "url_patterns": [
+        "/{slug}-episode-{ep}"
+      ],
+      "transition_selector": "", 
+      "player_selector": "div.play-video iframe, iframe.video"
     }
   ]
 }
