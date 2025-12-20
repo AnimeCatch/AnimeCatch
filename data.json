@@ -26,7 +26,12 @@
         "/episode/{slug}-الحلقة-{ep}/"
       ],
       "transition_selector": ".watchNow button",
-      "player_selector": ".mobIframe iframe, .mob-servers ul li"
+      "player_selector": ".mobIframe iframe, .mob-servers ul li",
+      
+      "//": "--- المفاتيح الجديدة لنظام السحب ---",
+      "menu_opener": ".mob-servers > span",
+      "server_list_selector": ".mob-servers ul li, .donwload-servers-list li a",
+      "name_servers": ["doodstream", "vidguard", "filemoon", "streamhg", "mixdrop"]
     },
     {
       "id": "mycima",
